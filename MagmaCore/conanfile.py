@@ -18,14 +18,14 @@ TOOL_REQUIRES: list[str] = [
 ]
 
 REQUIRES: list[str] = [
-    'thinkboxlibrary/1.0.0',
+    'thinkboxlibrary/1.0.1',
     'tinyxml2/9.0.0'
 ]
 
 
 class MagmaConan(ConanFile):
     name: str = 'magma'
-    version: str = '1.0.0'
+    version: str = '1.0.1'
     license: str = 'Apache-2.0'
     description: str = 'The core code for Magma.'
     settings: list[str] = SETTINGS

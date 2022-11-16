@@ -230,7 +230,11 @@ inline string_converter<FnDelegate> make_string_converter( const FnDelegate& fnD
 #define MAGMA_INPUT_ATTR( attrName, ... ) inputMeta->set_##attrName( __VA_ARGS__ );
 
 #define MAGMA_INPUT_END                                                                                                \
-    outType.add_input( (std::unique_ptr<frantic::magma::input_meta_interface>)inputMeta );                             \
+    outType.add_input(                                                                                                 \
+        std::unique_ptr<frantic::magma::input_meta_interface>{                                                         \
+            static_cast<frantic::magma::input_meta_interface*>( inputMeta.release() )                                   \
+        }                                                                                                              \
+    );                                                                                                                 \
     }
 
 #define MAGMA_INPUT_NAMES( ... )                                                                                       \

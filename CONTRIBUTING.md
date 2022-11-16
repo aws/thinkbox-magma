@@ -50,9 +50,16 @@ For MagmaMY you will need to build the following dependencies to your local Cona
 * https://github.com/aws/thinkbox-node-view
 * MagmaCore
 
+For MagmaMX you will need to build the following dependencies to your local Conan cache:
+
+* https://github.com/aws/thinkbox-cm-library
+* https://github.com/aws/thinkbox-library
+* https://github.com/aws/thinkbox-mx-library
+* MagmaCore
+
 ## Building
 
-To build MagmaCore, follow these steps in the MagmaCore directory. To build MagmaMY, follow these steps in the MagmaMY directory.
+To build MagmaCore, follow these steps in the MagmaCore directory. To build MagmaMY, follow these steps in the MagmaMY directory. To build MagmaMX, follow these steps in the MagmaMX directory.
 
 From the project directory run the following commands to install the dependencies and build Magma:
 
@@ -63,7 +70,7 @@ conan build . --build-folder build
 
 If you wish to generate a development environment without building the package immediately, you can add `--configure` to the `conan build` command.
 
-If you are using Windows, once run, you can open `build/MagmaCore.sln`/`build/MagmaMY.sln` in Visual Studio to use Visual Studio for development and debugging.
+If you are using Windows, once run, you can open `build/MagmaCore.sln`/`build/MagmaMY.sln`/`build/MagmaMX.sln` in Visual Studio to use Visual Studio for development and debugging.
 
 
 ### Publishing to Local Conan Cache
